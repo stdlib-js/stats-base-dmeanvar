@@ -15,7 +15,7 @@
   ],
   "main": "./lib",
   "browser": "./lib/main.js",
-  "gypfile": true,
+  "gypfile": false,
   "directories": {
     "benchmark": "./benchmark",
     "doc": "./docs",
