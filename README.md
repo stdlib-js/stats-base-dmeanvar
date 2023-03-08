@@ -32,10 +32,14 @@ The population [variance][variance] of a finite size population of size `N` is g
 
 <!-- <equation class="equation" label="eq:population_variance" align="center" raw="\sigma^2 = \frac{1}{N} \sum_{i=0}^{N-1} (x_i - \mu)^2" alt="Equation for the population variance."> -->
 
-<div class="equation" align="center" data-raw-text="\sigma^2 = \frac{1}{N} \sum_{i=0}^{N-1} (x_i - \mu)^2" data-equation="eq:population_variance">
+```math
+\sigma^2 = \frac{1}{N} \sum_{i=0}^{N-1} (x_i - \mu)^2
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\sigma^2 = \frac{1}{N} \sum_{i=0}^{N-1} (x_i - \mu)^2" data-equation="eq:population_variance">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@f85af87fd916af053698e5c33740948c95161155/lib/node_modules/@stdlib/stats/base/dmeanvar/docs/img/equation_population_variance.svg" alt="Equation for the population variance.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -43,10 +47,14 @@ where the population mean is given by
 
 <!-- <equation class="equation" label="eq:population_mean" align="center" raw="\mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i" alt="Equation for the population mean."> -->
 
-<div class="equation" align="center" data-raw-text="\mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i" data-equation="eq:population_mean">
+```math
+\mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\mu = \frac{1}{N} \sum_{i=0}^{N-1} x_i" data-equation="eq:population_mean">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@f85af87fd916af053698e5c33740948c95161155/lib/node_modules/@stdlib/stats/base/dmeanvar/docs/img/equation_population_mean.svg" alt="Equation for the population mean.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -54,10 +62,14 @@ Often in the analysis of data, the true population [variance][variance] is not k
 
 <!-- <equation class="equation" label="eq:unbiased_sample_variance" align="center" raw="s^2 = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_i - \bar{x})^2" alt="Equation for computing an unbiased sample variance."> -->
 
-<div class="equation" align="center" data-raw-text="s^2 = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_i - \bar{x})^2" data-equation="eq:unbiased_sample_variance">
+```math
+s^2 = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_i - \bar{x})^2
+```
+
+<!-- <div class="equation" align="center" data-raw-text="s^2 = \frac{1}{n-1} \sum_{i=0}^{n-1} (x_i - \bar{x})^2" data-equation="eq:unbiased_sample_variance">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@f85af87fd916af053698e5c33740948c95161155/lib/node_modules/@stdlib/stats/base/dmeanvar/docs/img/equation_unbiased_sample_variance.svg" alt="Equation for computing an unbiased sample variance.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -65,10 +77,14 @@ where the sample mean is given by
 
 <!-- <equation class="equation" label="eq:sample_mean" align="center" raw="\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i" alt="Equation for the sample mean."> -->
 
-<div class="equation" align="center" data-raw-text="\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i" data-equation="eq:sample_mean">
+```math
+\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i
+```
+
+<!-- <div class="equation" align="center" data-raw-text="\bar{x} = \frac{1}{n} \sum_{i=0}^{n-1} x_i" data-equation="eq:sample_mean">
     <img src="https://cdn.jsdelivr.net/gh/stdlib-js/stdlib@f85af87fd916af053698e5c33740948c95161155/lib/node_modules/@stdlib/stats/base/dmeanvar/docs/img/equation_sample_mean.svg" alt="Equation for the sample mean.">
     <br>
-</div>
+</div> -->
 
 <!-- </equation> -->
 
@@ -78,14 +94,30 @@ The use of the term `n-1` is commonly referred to as Bessel's correction. Note, 
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dmeanvar
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@esm/index.mjs';
+var dmeanvar = require( '@stdlib/stats-base-dmeanvar' );
 ```
 
 #### dmeanvar( N, correction, x, strideX, out, strideOut )
@@ -93,7 +125,7 @@ import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@
 Computes the [mean][arithmetic-mean] and [variance][variance] of a double-precision floating-point strided array `x`.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, -2.0, 2.0 ] );
 var out = new Float64Array( 2 );
@@ -117,8 +149,8 @@ The function has the following parameters:
 The `N` and `stride` parameters determine which elements are accessed at runtime. For example, to compute the [variance][variance] of every other element in `x`,
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 var x = new Float64Array( [ 1.0, 2.0, 2.0, -7.0, -2.0, 3.0, 4.0, 2.0 ] );
 var out = new Float64Array( 2 );
@@ -133,8 +165,8 @@ Note that indexing is relative to the first index. To introduce an offset, use [
 <!-- eslint-disable stdlib/capitalized-comments -->
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 var x0 = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var x1 = new Float64Array( x0.buffer, x0.BYTES_PER_ELEMENT*1 ); // start at 2nd element
@@ -153,7 +185,7 @@ var v = dmeanvar( N, 1, x1, 2, out1, 1 );
 Computes the [mean][arithmetic-mean] and [variance][variance] of a double-precision floating-point strided array using alternative indexing semantics.
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
 
 var x = new Float64Array( [ 1.0, -2.0, 2.0 ] );
 var out = new Float64Array( 2 );
@@ -170,8 +202,8 @@ The function has the following additional parameters:
 While [`typed array`][mdn-typed-array] views mandate a view offset based on the underlying `buffer`, the `offset` parameters support indexing semantics based on a starting index. For example, to calculate the [mean][arithmetic-mean] and [variance][variance] for every other value in `x` starting from the second value
 
 ```javascript
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import floor from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-floor@esm/index.mjs';
+var Float64Array = require( '@stdlib/array-float64' );
+var floor = require( '@stdlib/math-base-special-floor' );
 
 var x = new Float64Array( [ 2.0, 1.0, 2.0, -2.0, -2.0, 2.0, 3.0, 4.0 ] );
 var out = new Float64Array( 4 );
@@ -202,16 +234,11 @@ var v = dmeanvar.ndarray( N, 1, x, 2, 1, out, 2, 1 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="module">
-
-import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
-import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
-import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@esm/index.mjs';
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var round = require( '@stdlib/math-base-special-round' );
+var Float64Array = require( '@stdlib/array-float64' );
+var dmeanvar = require( '@stdlib/stats-base-dmeanvar' );
 
 var out;
 var x;
@@ -226,10 +253,6 @@ console.log( x );
 out = new Float64Array( 2 );
 dmeanvar( x.length, 1, x, 1, out, 1 );
 console.log( out );
-
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -266,7 +289,7 @@ console.log( out );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -310,7 +333,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 -->
 
 [chat-image]: https://img.shields.io/gitter/room/stdlib-js/stdlib.svg
-[chat-url]: https://gitter.im/stdlib-js/stdlib/
+[chat-url]: https://app.gitter.im/#/room/#stdlib-js_stdlib:gitter.im
 
 [stdlib]: https://github.com/stdlib-js/stdlib
 
@@ -330,15 +353,15 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [variance]: https://en.wikipedia.org/wiki/Variance
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/esm
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
 <!-- <related-links> -->
 
-[@stdlib/stats/base/dmean]: https://github.com/stdlib-js/stats-base-dmean/tree/esm
+[@stdlib/stats/base/dmean]: https://github.com/stdlib-js/stats-base-dmean
 
-[@stdlib/stats/base/dvariance]: https://github.com/stdlib-js/stats-base-dvariance/tree/esm
+[@stdlib/stats/base/dvariance]: https://github.com/stdlib-js/stats-base-dvariance
 
 <!-- </related-links> -->
 
