@@ -112,7 +112,7 @@ The use of the term `n-1` is commonly referred to as Bessel's correction. Note, 
 ## Usage
 
 ```javascript
-import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@deno/mod.js';
+import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@v0.2.0-deno/mod.js';
 ```
 
 #### dmeanvar( N, correction, x, strideX, out, strideOut )
@@ -233,7 +233,7 @@ var v = dmeanvar.ndarray( N, 1, x, 2, 1, out, 2, 1 );
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@deno/mod.js';
 import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@deno/mod.js';
-import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@deno/mod.js';
+import dmeanvar from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dmeanvar@v0.2.0-deno/mod.js';
 
 var out;
 var x;
