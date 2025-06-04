@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-03-29)
+## Unreleased (2025-06-04)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`744337a`](https://github.com/stdlib-js/stdlib/commit/744337aaebfd4a9631f17765bce57a38c5374173) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`e61abc7`](https://github.com/stdlib-js/stdlib/commit/e61abc75775756383a20985c7166f85149ee0b68) - **refactor:** update paths _(by Aayush Khanna)_
 -   [`5cc2bcd`](https://github.com/stdlib-js/stdlib/commit/5cc2bcd36d944adfa4f4badea6fce5de223be3dd) - **refactor:** update `stats/base/dmeanvar` native addon from C++ to C [(#4648)](https://github.com/stdlib-js/stdlib/pull/4648) _(by Dhruv Arvind Singh)_
 -   [`62364f6`](https://github.com/stdlib-js/stdlib/commit/62364f62ea823a3b52c2ad25660ecd80c71f8f36) - **style:** fix C comment alignment _(by Philipp Burckhardt)_
@@ -29,11 +30,12 @@
 
 ### Contributors
 
-A total of 4 people contributed to this release. Thank you to the following contributors:
+A total of 5 people contributed to this release. Thank you to the following contributors:
 
 -   Aayush Khanna
 -   Athan Reines
 -   Dhruv Arvind Singh
+-   Gururaj Gurram
 -   Philipp Burckhardt
 
 </section>
