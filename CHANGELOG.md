@@ -4,7 +4,17 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-04)
+## Unreleased (2025-06-21)
+
+<section class="features">
+
+### Features
+
+-   [`30831fb`](https://github.com/stdlib-js/stdlib/commit/30831fb48cf6536b641f0704f544b50a9b20e50b) - add C ndarray interface and refactor implementation for `stats/base/dmeanvar` [(#7410)](https://github.com/stdlib-js/stdlib/pull/7410)
+
+</section>
+
+<!-- /.features -->
 
 <section class="commits">
 
@@ -12,6 +22,7 @@
 
 <details>
 
+-   [`30831fb`](https://github.com/stdlib-js/stdlib/commit/30831fb48cf6536b641f0704f544b50a9b20e50b) - **feat:** add C ndarray interface and refactor implementation for `stats/base/dmeanvar` [(#7410)](https://github.com/stdlib-js/stdlib/pull/7410) _(by Gururaj Gurram, Athan Reines)_
 -   [`744337a`](https://github.com/stdlib-js/stdlib/commit/744337aaebfd4a9631f17765bce57a38c5374173) - **refactor:** update paths _(by Gururaj Gurram)_
 -   [`e61abc7`](https://github.com/stdlib-js/stdlib/commit/e61abc75775756383a20985c7166f85149ee0b68) - **refactor:** update paths _(by Aayush Khanna)_
 -   [`5cc2bcd`](https://github.com/stdlib-js/stdlib/commit/5cc2bcd36d944adfa4f4badea6fce5de223be3dd) - **refactor:** update `stats/base/dmeanvar` native addon from C++ to C [(#4648)](https://github.com/stdlib-js/stdlib/pull/4648) _(by Dhruv Arvind Singh)_
