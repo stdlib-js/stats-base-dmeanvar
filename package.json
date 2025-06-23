@@ -48,7 +48,7 @@
     "@stdlib/napi-argv-int64": "^0.2.2",
     "@stdlib/napi-argv-strided-float64array": "^0.2.2",
     "@stdlib/napi-export": "^0.2.2",
-    "@stdlib/stats-base-dmeanvarpn": "^0.2.2",
+    "@stdlib/stats-strided-dmeanvarpn": "github:stdlib-js/stats-strided-dmeanvarpn#main",
     "@stdlib/strided-base-stride2offset": "^0.1.0",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
     "@stdlib/utils-library-manifest": "^0.2.2",
